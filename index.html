@@ -25,11 +25,11 @@
 <h1>David Mendlen</h1>
   <p class="sub" style="margin:0 0 6px; font-size:19px; color:var(--ink);"><strong>Jarvis</strong> household text notifications</p>
 <p class="sub">Program disclosure for the toll-free number (888) 961-5202. David Mendlen is a sole proprietor operating the household-automation software he calls Jarvis; this page describes the text-message program he runs under it.</p>
-<nav><a href="#what">What is sent</a><a href="#optin">How consent is given</a><a href="#stop">How to stop</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav>
+<nav><a href="#what">What is sent</a><a href="#optin">How consent is given</a><a href="consent-script.html">Verbal consent script</a><a href="#stop">How to stop</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav>
 
 <h2 id="who">Who sends these messages</h2>
-<p><strong>David Mendlen</strong>, a sole proprietor based in Minneapolis, Minnesota, operates this text-message
-program. He built and runs Jarvis, home-automation software for his own household; it is not offered to the
+<p><strong>David Mendlen</strong>, a sole proprietor based in Bellevue, Washington, operates this text-message
+program (contact: <a href="mailto:davemen@hotmail.com">davemen@hotmail.com</a>, +1 425 443 7554). He built and runs Jarvis, home-automation software for his own household; it is not offered to the
 public, sells nothing, and messages nobody who has not personally enrolled a number as described below.</p>
 
 <h2 id="what">What is sent</h2>
@@ -46,14 +46,15 @@ as actually sent:</p>
 <blockquote>Jarvis: 3 things I could build for you today. Reply with a number to pick one. Reply STOP to unsubscribe.</blockquote>
 
 <h2 id="optin">How consent is given (the only opt-in path)</h2>
-<p>There is no web form, keyword, paper form, QR code or advertisement, because these messages are not offered
-to the public. A household member is enrolled in person, on the household's own server, like this:</p>
+<p>Consent is <strong>verbal and in person</strong>. There is no web form, keyword, paper form, QR code or
+advertisement, because these messages are not offered to the public. A household member is enrolled face to face,
+at the household's own server, like this:</p>
 <ol>
-  <li>The household member sits at the server and runs the enrollment tool: <code>cd ~/Jarvis &amp;&amp; tools/enroll-sms-number.sh</code>.</li>
-  <li>The tool displays the notice below in full. Nothing is pre-filled or pre-checked and no number is enrolled by default.</li>
+  <li>David Mendlen and the household member sit at the server and run the enrollment tool: <code>cd ~/Jarvis &amp;&amp; tools/enroll-sms-number.sh</code>.</li>
+  <li>The tool displays the notice below in full, and David Mendlen <strong>reads it aloud</strong> to the person, word for word, following the <a href="consent-script.html">verbal consent script</a>. Nothing is pre-filled or pre-checked and no number is enrolled by default.</li>
   <li>The person types their own name and their own mobile number in E.164 form.</li>
   <li>The person must type the words <strong>I AGREE</strong>. Any other answer cancels and nothing is recorded.</li>
-  <li>Consent is written to an audit log with a UTC timestamp, the name and the number, and only then is the number added to Jarvis's list of recipients.</li>
+  <li>Consent is written to an audit log with a UTC timestamp, the name, the number and a note that the notice was read aloud, and only then is the number added to Jarvis's list of recipients.</li>
 </ol>
 <p>The notice, word for word:</p>
 <blockquote>
@@ -79,7 +80,8 @@ notifications. Reply STOP to unsubscribe, HELP for help."</em></p>
   <li>Reply <strong>HELP</strong> for help, or email <a href="mailto:jarvisdave2001@gmail.com">jarvisdave2001@gmail.com</a>.</li>
 </ul>
 
-<footer>Operated by David Mendlen, Minneapolis, Minnesota &middot; jarvisdave2001@gmail.com &middot;
+<footer>Operated by David Mendlen, Bellevue, Washington &middot; <a href="mailto:davemen@hotmail.com">davemen@hotmail.com</a> &middot;
+Help: jarvisdave2001@gmail.com &middot; <a href="consent-script.html">Verbal consent script</a> &middot;
 <a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a></footer>
 </main>
 </body>

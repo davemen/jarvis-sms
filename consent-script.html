@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>David Mendlen &mdash; Verbal Consent Script</title>
+<meta name="description" content="The exact words David Mendlen reads aloud to obtain verbal consent for Jarvis household text notifications from (888) 961-5202.">
+<style>
+  :root { --bg:#fbfaf7; --fg:#1d1d1f; --muted:#5f5f66; --rule:#e3e0d8; --accent:#2f6f4f; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 30px; margin: 0 0 6px; }
+  h2 { font-size: 21px; margin: 36px 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  ol li, ul li { margin: 6px 0; }
+  blockquote { margin: 12px 0; padding: 12px 16px; background: #fff; border-left: 4px solid var(--accent); }
+  .who { font-weight: 600; color: var(--accent); }
+  code { background:#f0ede6; padding: 1px 5px; border-radius: 4px; font-size: 15px; }
+  nav a { margin-right: 18px; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+<h1>David Mendlen</h1>
+<p class="sub">Verbal consent script for Jarvis household text notifications from the toll-free number (888) 961-5202.</p>
+<nav><a href="./">Program overview</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav>
+
+<h2>When this script is used</h2>
+<p>Every household member who receives these texts is enrolled in person by David Mendlen (sole proprietor), at the
+household's own server, with the enrollment tool <code>tools/enroll-sms-number.sh</code> open on screen. He reads
+the script below aloud, word for word, before the person answers anything. No number is enrolled without it.</p>
+
+<h2>The script, word for word</h2>
+<blockquote>
+<p><span class="who">David Mendlen:</span> "Before I add your number, I'm going to read you what you're agreeing to.
+These are text messages from Jarvis, the home assistant that runs my household, sent by me, David Mendlen, from
+the toll-free number 888-961-5202.</p>
+<p>By adding your mobile number you agree to receive automated text notifications from Jarvis about the home: door
+and security alerts when the house looks empty, a daily house check, and notes Jarvis has for you. You can reply to
+act on them.</p>
+<p>Message frequency varies, typically one to five messages a day. Message and data rates may apply.</p>
+<p>You can reply STOP at any time to unsubscribe. Reply HELP for help, or email jarvisdave2001@gmail.com.</p>
+<p>The terms and privacy policy are at davemen.github.io/jarvis-sms. Your mobile number is never shared with third
+parties or affiliates for marketing or promotional purposes. Agreeing isn't a condition of anything; nothing is
+for sale.</p>
+<p>Do you agree to receive these text messages? If you do, type your name, your mobile number, and the words I
+AGREE."</p>
+<p><span class="who">Household member:</span> "Yes, I agree." <em>(then types their name, their own number, and
+I AGREE at the prompt)</em></p>
+</blockquote>
+<p>If the person says no, or types anything other than <strong>I AGREE</strong>, enrollment is cancelled and
+nothing is recorded.</p>
+
+<h2>How consent is recorded</h2>
+<ul>
+  <li>The tool writes a line to an audit log on the household server: UTC timestamp, the person's name, the number,
+    and that the notice was read aloud. Only then is the number added to Jarvis's recipients.</li>
+  <li>The number then receives one confirmation text: <em>"Jarvis: you will now receive household notifications.
+    Reply STOP to unsubscribe, HELP for help."</em></li>
+  <li>The log is kept for as long as the number is enrolled and after an opt-out, as evidence of both.</li>
+</ul>
+
+<h2>How to opt out afterwards</h2>
+<ul>
+  <li>Reply <strong>STOP</strong> (or CANCEL, END, QUIT, UNSUBSCRIBE) to any message. It takes effect immediately
+    and the number receives one final confirmation.</li>
+  <li>Or tell David Mendlen in person or by email; he runs <code>tools/enroll-sms-number.sh --revoke</code>, which
+    removes the number and logs the revocation.</li>
+</ul>
+
+<footer>David Mendlen, Bellevue, Washington &middot; <a href="mailto:davemen@hotmail.com">davemen@hotmail.com</a> &middot;
+Help: jarvisdave2001@gmail.com &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a></footer>
+</main>
+</body>
+</html>
